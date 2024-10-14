@@ -31,10 +31,4 @@ y = 7   # Binary: 0111
 result = x | y  # Result: 1111 (Decimal: 15)
 ```
 
-### Bitwise NOR
 
-```python
-x = 10 # Binary: 1010
-y = 7 # binary: 0111
-result =x/y
-```
