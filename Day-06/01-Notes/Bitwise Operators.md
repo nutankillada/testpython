@@ -30,3 +30,5 @@ x = 10  # Binary: 1010
 y = 7   # Binary: 0111
 result = x | y  # Result: 1111 (Decimal: 15)
 ```
+
+
