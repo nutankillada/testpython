@@ -45,17 +45,23 @@ print(my_variable)  # Output: 42
 
 It's important to follow naming conventions and best practices for variables to write clean and maintainable code:
 
-- Variable names should be descriptive and indicate their purpose.
+- Variable names should be descriptive, meaningful and indicate their purpose.
 - Use lowercase letters and separate words with underscores (snake_case) for variable names.
+- Use lowercase letters and separate words with 1st letter as caps from 2nd word onwards (camelCase) for variable names.
 - Avoid using reserved words (keywords) for variable names.
-- Choose meaningful names for variables.
 
 #### Example:
 
 ```python
 # Good variable naming
+
+# snake case [follow same std always throughout your coding practice - more readful]
 user_name = "John"
 total_items = 42
+
+# camel case
+userName = "John"
+totalItems = 42
 
 # Avoid using reserved words
 class = "Python"  # Not recommended
