@@ -1,6 +1,7 @@
 # Conditional Statements in Python
 
-Conditional statements are a fundamental part of programming that allow you to make decisions and execute different blocks of code based on certain conditions. In Python, you can use `if`, `elif` (short for "else if"), and `else` to create conditional statements.
+Conditional statements are a fundamental part of programming that allow you to make decisions and execute different blocks of code based on certain conditions. 
+In Python, you can use `if`, `elif` (short for "else if"), and `else` to create conditional statements.
 
 ## `if` Statement
 

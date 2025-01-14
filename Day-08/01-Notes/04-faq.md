@@ -6,10 +6,11 @@ A list in Python is a collection of ordered and mutable elements. In DevOps, lis
 **Q2: How do you create a list in Python, and can you provide an example related to DevOps?**
 
 *Answer:*
-In Python, you create a list using square brackets `[]`. Here's an example related to DevOps:
+In Python, you create a list using square brackets `[]` or by using 'list()' function. Here's an example related to DevOps:
 
 ```python
 servers = ['web-server-01', 'db-server-01', 'app-server-01']
+# list_new = list(1,2,3.14,"test")
 ```
 
 This list can be used to represent a list of servers in a DevOps environment.

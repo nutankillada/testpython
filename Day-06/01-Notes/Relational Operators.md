@@ -1,8 +1,8 @@
 # Relational Operations in Python
 
 ## Introduction
-
-Relational operators in Python are used to compare two values and determine the relationship between them. These operators return a Boolean result, which is either `True` or `False`.
+Relational operators in Python are used to compare two values and determine the relationship between them. 
+These operators return a Boolean result, which is either `True` or `False`.
 
 ## List of Relational Operators
 

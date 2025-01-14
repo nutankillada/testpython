@@ -31,8 +31,10 @@ my_tuple = (1, 2, 'apple', 'banana')
 ## 4. Use Cases
 
 **List:** Lists are used when you need a collection of elements that can change, such as a dynamic list of items or data that needs to be modified.
+Ex. list of ec2 instances, s3 buckets etc.
 
 **Tuple:** Tuples are used when you need an ordered collection of elements that should not change, such as representing a point in 2D space (x, y), or when you want to ensure the integrity of the data.
+Ex. list of aws account admins which should not be modified
 
 ## 5. Iteration
 

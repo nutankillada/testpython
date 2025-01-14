@@ -2,7 +2,8 @@
 
 ## Introduction
 
-Membership operators in Python are used to check whether a value is present in a sequence or collection, such as a list, tuple, or string. The membership operators are "in" and "not in."
+Membership operators in Python are used to check whether a value is present in a sequence or collection, such as a list, tuple, or string. 
+The membership operators are "in" and "not in."
 
 ## List of Membership Operators
 
