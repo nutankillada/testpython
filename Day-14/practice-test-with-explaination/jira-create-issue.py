@@ -16,6 +16,7 @@ headers = {
   "Content-Type": "application/json"
 }
 
+# data to be sent while making POST HTTP request to create JIRA issue with the given fields
 payload = json.dumps( {
   "fields": {
 
