@@ -6,12 +6,33 @@ DevOps engineers often use "while" loops in various real-time use cases to autom
 
    DevOps engineers often use "while" loops in CI/CD pipelines to monitor the deployment status of applications. They can create a "while" loop that periodically checks the status of a deployment or a rolling update until it completes successfully or fails. For example, waiting for a certain number of pods to be ready in a Kubernetes deployment:
 
+In Linux: 
    ```bash
    while kubectl get deployment/myapp | grep -q 0/1; do
        echo "Waiting for myapp to be ready..."
        sleep 10
    done
    ```
+```
+ In Python:
+import subprocess
+import time
+
+while True:
+    result = subprocess.run(
+        ["kubectl", "get", "deployment/myapp"],
+        capture_output=True,
+        text=True
+    )
+    
+    if "0/1" not in result.stdout:
+        break  # Exit loop when the deployment is ready
+
+    print("Waiting for myapp to be ready...")
+    time.sleep(10)
+
+print("myapp is ready!")
+```
 
 2. **Provisioning and Scaling Cloud Resources:**
 
