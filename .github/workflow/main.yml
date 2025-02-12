@@ -1,0 +1,64 @@
+name: Fetch JIRA Projects
+
+on:
+  push:
+    branches:
+      - main  # Runs on every push to the main branch
+  workflow_dispatch:  # Allows manual execution
+
+jobs:
+  fetch-jira:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Fetch JIRA Projects
+        env:
+          JIRA_TOKEN: ${{ secrets.JIRA_TOKEN }}
+        run: |
+          python - <<EOF
+          import requests
+          from requests.auth import HTTPBasicAuth
+          import json
+          import os
+
+          # JIRA API Credentials
+          email = "prashantsukhadeve123@gmail.com"
+          api_token = os.getenv("JIRA_TOKEN")
+
+          if not api_token:
+              raise ValueError("JIRA_TOKEN environment variable is missing!")
+
+          url = "https://prashantsukhadeve123.atlassian.net/rest/api/3/project"
+          auth = HTTPBasicAuth(email, api_token)
+
+          headers = {
+              "Accept": "application/json"
+          }
+
+          response = requests.request(
+              "GET",
+              url,
+              headers=headers,
+              auth=auth
+          )
+
+          output = json.loads(response.text)
+
+          if response.status_code == 200:
+              name = output[1]["name"]
+              print(f"Project Name: {name}")
+              print(json.dumps(output, sort_keys=True, indent=4, separators=(',', ': ')))
+          else:
+              print(f"Error {response.status_code}: {response.text}")
+
+          EOF
